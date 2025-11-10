@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Donation Form</title>
+<style>
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 40px;
+        background-color: #fff;
+    }
+    h2 {
+        color: #b40000;
+        border-bottom: 2px solid #ccc;
+        padding-bottom: 5px;
+    }
+    form {
+        width: 600px;
+        margin: 0 auto;
+    }
+    label {
+        display: block;
+        margin-top: 10px;
+        font-weight: bold;
+    }
+    input[type="text"],
+    input[type="email"],
+    select,
+    textarea {
+        width: 100%;
+        padding: 5px;
+        margin-top: 3px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+    }
+    input[type="radio"],
+    input[type="checkbox"] {
+        margin-right: 5px;
+    }
+    .section {
+        margin-top: 25px;
+    }
+    .donation-amounts input {
+        margin-right: 5px;
+    }
+    textarea {
+        height: 70px;
+        resize: none;
+    }
+    .buttons {
+        margin-top: 20px;
+    }
+    input[type="reset"],
+    input[type="submit"] {
+        padding: 6px 12px;
+        margin-right: 10px;
+        border: 1px solid #888;
+        border-radius: 3px;
+        cursor: pointer;
+        background-color: #f0f0f0;
+    }
+    input[type="submit"]:hover {
+        background-color: #dcdcdc;
+    }
+    p.note {
+        font-size: 0.9em;
+        color: #555;
+    }
+    .small-text {
+        font-size: 0.9em;
+    }
+</style>
+</head>
+<body>
+
+<form>
+    <p><strong>* Denotes Required Information</strong></p>
+    <p> &gt; 1 Donation &nbsp; &gt; 2 Confirmation &nbsp; &gt; Thank You!</p>
+
+    <h2>Donor Information</h2>
+    <label>First Name* <input type="text" name="first_name" required></label>
+    <label>Last Name* <input type="text" name="last_name" required></label>
+    <label>Company <input type="text" name="company"></label>
+    <label>Address 1* <input type="text" name="address1" required></label>
+    <label>Address 2 <input type="text" name="address2"></label>
+    <label>City* <input type="text" name="city" required></label>
+    <label>State* 
+        <select name="state" required>
+            <option>Select a State</option>
+        </select>
+    </label>
+    <label>Zip <input type="text" name="zip"></label>
+    <label>Country* 
+        <select name="country" required>
+            <option>Select a Country</option>
+        </select>
+    </label>
+    <label>Phone <input type="text" name="phone"></label>
+    <label>Fax <input type="text" name="fax"></label>
+    <label>Email* <input type="email" name="email" required></label>
+
+    <div class="section donation-amounts">
+        <label>Donation Amount*</label>
+        <input type="radio" name="amount" value="none"> None
+        <input type="radio" name="amount" value="50">$50
+        <input type="radio" name="amount" value="75">$75
+        <input type="radio" name="amount" value="100">$100
+        <input type="radio" name="amount" value="250">$250
+        <input type="radio" name="amount" value="other">Other Amount $
+        <input type="text" style="width:100px;">
+    </div>
+
+    <div class="section">
+        <input type="checkbox" name="recurring"> I am interested in giving on a regular basis.
+        <br>
+        Monthly Credit Card $ <input type="text" style="width:80px;"> For <input type="text" style="width:50px;"> Months
+    </div>
+
+    <h2>Honorarium and Memorial Donation Information</h2>
+    <label>I would like to make this donation 
+        <input type="radio" name="honor" value="honor"> To Honor 
+        <input type="radio" name="honor" value="memory"> In Memory of
+    </label>
+    <label>Name <input type="text" name="honor_name"></label>
+    <label>Acknowledge Donation to <input type="text" name="ack_name"></label>
+    <label>Address <input type="text" name="ack_address"></label>
+    <label>City <input type="text" name="ack_city"></label>
+    <label>State 
+        <select name="ack_state">
+            <option>Select a State</option>
+        </select>
+    </label>
+    <label>Zip <input type="text" name="ack_zip"></label>
+
+    <h2>Additional Information</h2>
+    <label>Please enter your name, company or organization as you would like it to appear in our publications:</label>
+    <input type="text" name="publication_name">
+
+    <div class="section small-text">
+        <label><input type="checkbox"> I would like my gift to remain anonymous.</label>
+        <label><input type="checkbox"> My employer offers a matching gift program. I will mail the matching gift form.</label>
+        <label><input type="checkbox"> Please save the cost of acknowledging this gift by not mailing a thank you letter.</label>
+    </div>
+
+    <label>(Please type any questions or feedback here)</label>
+    <textarea></textarea>
+
+    <div class="section small-text">
+        <p><strong>How may we contact you?</strong></p>
+        <label><input type="checkbox"> E-mail</label>
+        <label><input type="checkbox"> Postal Mail</label>
+        <label><input type="checkbox"> Telephone</label>
+        <label><input type="checkbox"> Fax</label>
+
+        <p><strong>I would like to receive newsletters and information about special events by:</strong></p>
+        <label><input type="checkbox"> E-mail</label>
+        <label><input type="checkbox"> Postal Mail</label>
+
+        <p><input type="checkbox"> I would like information about volunteering with the organization.</p>
+    </div>
+
+    <div class="buttons">
+        <input type="reset" value="Reset">
+        <input type="submit" value="Continue">
+    </div>
+
+    <p class="note">Donate online with confidence. You are on a secure server.</p>
+    <p class="note">If you have any problems or questions, please contact support.</p>
+
+</form>
+
+</body>
+</html>
