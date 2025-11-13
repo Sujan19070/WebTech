@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Student Profile — Sujan</title>
+
+    <!-- External CSS (as required by the task) -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Metadata -->
+    <meta name="description" content="Styled student profile page using CSS box model principles." />
+    <meta name="author" content="Sujan" />
+  </head>
+
+  <body>
+    <header class="site-header">
+      <h1>Department of Computer Science and Engineering</h1>
+    </header>
+
+    <!-- Profile section (centered, fixed width, box model applied) -->
+    <section class="profile-card" aria-labelledby="student-name">
+      <img
+        class="avatar"
+        
+        src="sujan.png"
+        alt="Student photo"
+        width="160"
+        height="160"
+      />
+
+      <div class="profile-text">
+        <h2 id="student-name">Sujan Ahmed</h2>
+
+        <ul class="details">
+          <li><strong>Department:</strong> Computer Science & Engineering (CSE)</li>
+          <li><strong>Student ID:</strong> 23-51193-1 </li>
+        </ul>
+
+        <p class="bio">
+          I am a focused and curious CSE student who enjoys building clean, accessible web
+          interfaces and solving algorithmic problems. I’m currently learning HTML5 semantics,
+          CSS layout, and JavaScript fundamentals.
+        </p>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <small>© <time id="year"></time> Department Website • All rights reserved.</small>
+    </footer>
+
+    <script>
+      // Small enhancement for current year in footer
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>

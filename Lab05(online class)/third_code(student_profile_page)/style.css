@@ -1,0 +1,99 @@
+/* Base layout */
+:root {
+  --bg: #0b1220;
+  --panel: #f6f8fc;          /* light background for the profile section (requirement) */
+  --text: #0f172a;
+  --muted: #475569;
+  --line: #d8e0ee;
+  --brand: #0ea5a3;
+  --radius: 14px;
+}
+
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  color: var(--text);
+  background: var(--bg);
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  line-height: 1.6;
+}
+
+/* Header */
+.site-header {
+  background: #0f1629;
+  color: #e7f6f5;
+  padding: 20px;                  /* padding (box model) */
+  border-bottom: 1px solid #1f2a44;
+  text-align: center;             /* centered heading */
+  margin-bottom: 24px;            /* margin to separate sections (box model) */
+}
+.site-header h1 {
+  margin: 0;
+  font-size: 1.4rem;              /* em/rem unit usage */
+}
+
+/* Profile section */
+.profile-card {
+  /* Center-align using margin: auto and a fixed width (requirement) */
+  width: 640px;                   /* fixed width in px (requirement) */
+  margin: 0 auto 28px;            /* auto centers, plus bottom margin to separate sections */
+  padding: 24px;                  /* padding inside the profile box (box model) */
+  background: var(--panel);       /* light background color (requirement) */
+  border: 2px solid var(--line);  /* border around the section (box model) */
+  border-radius: var(--radius);   /* rounded corners (requirement) */
+
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  gap: 20px;
+  align-items: center;
+}
+
+/* Student image */
+.avatar {
+  display: block;
+  width: 100%;                    /* percentage unit usage */
+  height: auto;
+  border-radius: 50%;             /* rounded image corners (requirement) */
+  border: 3px solid #e2e8f0;
+}
+
+/* Text block */
+.profile-text h2 {
+  margin: 0 0 0.4em 0;            /* em unit usage */
+  font-size: 1.6rem;
+  color: #0b3b3a;
+}
+.details {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 0.6em 0;
+  color: var(--muted);
+}
+.details li + li { margin-top: 0.25em; }
+
+.bio {
+  margin: 0;
+  font-size: 1rem;
+}
+
+/* Footer */
+.site-footer {
+  text-align: center;
+  color: #d0e7e5;
+  background: #0f1629;
+  border-top: 1px solid #1f2a44;
+  padding: 16px;                  /* padding (box model) */
+}
+
+/* Small-screen tweaks while keeping the requirement of a fixed width on larger viewports */
+@media (max-width: 720px) {
+  .profile-card {
+    width: 92%;                   /* percentage width for small screens */
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .avatar { margin: 0 auto; max-width: 220px; }
+}

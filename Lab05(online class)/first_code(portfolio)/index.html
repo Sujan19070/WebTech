@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Metadata (required by the task) -->
+    <title>Sujan — Personal Portfolio</title>
+    <meta name="author" content="Sujan" />
+    <meta
+      name="description"
+      content="Personal portfolio homepage for Sujan: biography, education, and contact form."
+    />
+    <meta
+      name="keywords"
+      content="Sujan, portfolio, computer science student, resume, education, contact"
+    />
+    <meta name="theme-color" content="#0f766e" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+
+    <header class="site-header" role="banner">
+      <div class="container header-inner">
+        <h1 class="site-title">Sujan</h1>
+        <nav aria-label="Primary" class="site-nav">
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <!-- Biography -->
+      <section id="about" class="section">
+        <div class="container">
+          <header class="section-header">
+            <h2>About Me</h2>
+          </header>
+
+          <article class="bio">
+            <p>
+              I’m a computer science student preparing for an internship. I enjoy
+              building clean, accessible web applications and learning modern
+              frontend tools. I’m currently focusing on HTML5 semantics,
+              responsive CSS, and JavaScript fundamentals.
+            </p>
+            <p class="highlights">
+              Key interests: Web development • Problem solving • Open source
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <!-- Education table -->
+      <section id="education" class="section">
+        <div class="container">
+          <header class="section-header">
+            <h2>Education</h2>
+          </header>
+
+          <div class="table-wrap">
+            <table>
+              <caption>Educational Qualifications</caption>
+              <thead>
+                <tr>
+                  <th scope="col">Degree</th>
+                  <th scope="col">Institution</th>
+                  <th scope="col">Year</th>
+                  <th scope="col">Result/CGPA</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>B.Sc. in Computer Science (Ongoing)</td>
+                  <td>Your University Name</td>
+                  <td>2023–Present</td>
+                  <td>—</td>
+                </tr>
+                <tr>
+                  <td>HSC</td>
+                  <td>Your College Name</td>
+                  <td>2021</td>
+                  <td>GPA 5.00</td>
+                </tr>
+                <tr>
+                  <td>SSC</td>
+                  <td>Your School Name</td>
+                  <td>2019</td>
+                  <td>GPA 5.00</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact form -->
+      <section id="contact" class="section">
+        <div class="container">
+          <header class="section-header">
+            <h2>Contact Me</h2>
+            <p>Feel free to reach out for internships, collaboration, or questions.</p>
+          </header>
+
+          <form id="contact-form" class="contact-form" novalidate>
+            <fieldset>
+              <legend>Your details</legend>
+
+              <label for="name">Full name</label>
+              <input id="name" name="name" type="text" placeholder="e.g., Sujan" required />
+
+              <label for="email">Email</label>
+              <input
+                id="email"
+                name="email"
+                type="email"
+                placeholder="you@example.com"
+                required
+              />
+
+              <label for="subject">Subject</label>
+              <input id="subject" name="subject" type="text" placeholder="How can I help?" />
+            </fieldset>
+
+            <fieldset>
+              <legend>Message</legend>
+              <label for="message" class="sr-only">Message</label>
+              <textarea
+                id="message"
+                name="message"
+                rows="6"
+                placeholder="Write your message here..."
+                required
+              ></textarea>
+            </fieldset>
+
+            <button type="submit" class="btn">Send Message</button>
+            <p id="form-status" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <small>
+          © <time id="year"></time> Sujan. All rights reserved.
+          <span aria-hidden="true">•</span>
+          <a href="#top">Back to top</a>
+        </small>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
